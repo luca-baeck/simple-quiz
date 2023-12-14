@@ -73,7 +73,7 @@ app.post('/quizSubmitted', (req, res) => {
 
     console.log(users);
 
-   res.redirect("/quiz")
+   res.redirect("/quiz")//change to resultpage so that users see results after commiting
 });
 
 app.get('/result', (req, res) => {
