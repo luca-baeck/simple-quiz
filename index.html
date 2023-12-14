@@ -4,11 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+      body {
+        color: #326ce5;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      h1 {
+        
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      label{
+        padding-top: 1%;
+        
+
+      }
+      form select{
+        display: block;
+        margin-top: 5%;
+        width: 50%;
+      }
+      .submit{
+      }
+      .demo{
+      text-align:center;
+      }
+
+
+
+.rainbow{
+		animation: rainbow 5s linear;
+		animation-iteration-count: infinite;
+}
+.img {
+  width: 200px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: blue; 
+}
+h1{
+  text-align: center;
+}
+.main {
+    width: 600px;
+    height: 100%;
+    display: inline-block;
+}
+
+.links_rechts {
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-right: 4%;
+    width: 10%;
+    height: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mitte {
+    width: 50%;
+    height: 10%;
+    
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+
+    </style>
 </head>
 <body>
-    <form action="/quizSubmitted" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name"value="" placeholder="Type name">
+  <div class="main">
+    <div class="links_rechts">    <img src="https://www.ovhcloud.com/sites/default/files/styles/text_media_horizontal/public/2021-04/K8S-logo.png" alt="" width="100%">
+    </div><div class="mitte">      <h1 class="demo rainbow">KUBERNETES QUIZ</h1>
+    </div>
+
+
+  <form action="/quizSubmitted" method="post">
+       
+        <input type="text" name="name"value="" placeholder="Enter your name.">
         <br >
         <label for="lang">Language</label>
         <select name="frage 1" id="lang">
