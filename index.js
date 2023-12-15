@@ -15,12 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   }
 
 
-app.get('/quiz', (req, res) => {
+app.get('/', (req, res) => {
     // for (let i = 0; i < 1000000; i++) {
     //     for (let inde = 0; inde < 6000; inde++) {
     //     }
     // }
-    res.send("<h1>Got to / only</h1>");
+    res.send("<h1>Please go to /quiz/quiz to see the quiz</h1><br/><a href='/quiz/quiz'>Click here for Quiz</a>");
 });
 
 // app.get('/:number', (req, res) => {
@@ -33,7 +33,7 @@ app.get('/quiz', (req, res) => {
 
 
 
-app.get('/', (req, res) => {
+app.get('/quiz', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
@@ -73,7 +73,7 @@ app.post('/quizSubmitted', (req, res) => {
 
     console.log(users);
 
-   res.redirect("/result")//change to resultpage so that users see results after commiting
+   res.redirect("/quiz/result")//change to resultpage so that users see results after commiting
 });
 
 app.get('/result', (req, res) => {
@@ -92,8 +92,10 @@ const createResultPage = (users) => {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Kubernetes</title>
-        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1055px-Kubernetes_logo_without_workmark.svg.png">
+    <title>Kubernetes</title>
+    <meta http-equiv="refresh" content="3">
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1055px-Kubernetes_logo_without_workmark.svg.png">
+    
         <style>
             .row {
                 display: flex;
