@@ -15,12 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   }
 
 
-app.get('/', (req, res) => {
+app.get('/quiz', (req, res) => {
     // for (let i = 0; i < 1000000; i++) {
     //     for (let inde = 0; inde < 6000; inde++) {
     //     }
     // }
-    res.send("<h1>asdkjn</h1>");
+    res.send("<h1>Got to / only</h1>");
 });
 
 // app.get('/:number', (req, res) => {
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 
 
-app.get('/quiz', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
@@ -73,7 +73,7 @@ app.post('/quizSubmitted', (req, res) => {
 
     console.log(users);
 
-   res.redirect("/quiz")//change to resultpage so that users see results after commiting
+   res.redirect("/result")//change to resultpage so that users see results after commiting
 });
 
 app.get('/result', (req, res) => {
@@ -92,7 +92,8 @@ const createResultPage = (users) => {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Two Columns in One Row</title>
+        <title>Kubernetes</title>
+        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1055px-Kubernetes_logo_without_workmark.svg.png">
         <style>
             .row {
                 display: flex;
